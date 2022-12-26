@@ -14,6 +14,9 @@
 		974FF265295261E7008AB23A /* TableViewWithButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974FF264295261E7008AB23A /* TableViewWithButtonTests.swift */; };
 		974FF26F295261E7008AB23A /* TableViewWithButtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974FF26E295261E7008AB23A /* TableViewWithButtonUITests.swift */; };
 		974FF271295261E7008AB23A /* TableViewWithButtonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974FF270295261E7008AB23A /* TableViewWithButtonUITestsLaunchTests.swift */; };
+		97DE73AC2954341F00A558F3 /* myTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DE73AB2954341F00A558F3 /* myTableView.swift */; };
+		97DE73AE295435A400A558F3 /* myTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97DE73AD295435A400A558F3 /* myTableView.xib */; };
+		97DE73B129595D1000A558F3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97DE73B029595D1000A558F3 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		974FF26A295261E7008AB23A /* TableViewWithButtonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewWithButtonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		974FF26E295261E7008AB23A /* TableViewWithButtonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewWithButtonUITests.swift; sourceTree = "<group>"; };
 		974FF270295261E7008AB23A /* TableViewWithButtonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewWithButtonUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		97DE73AB2954341F00A558F3 /* myTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTableView.swift; sourceTree = "<group>"; usesTabs = 0; };
+		97DE73AD295435A400A558F3 /* myTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = myTableView.xib; sourceTree = "<group>"; };
+		97DE73B029595D1000A558F3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +103,12 @@
 			children = (
 				974FF252295261E5008AB23A /* AppDelegate.swift */,
 				974FF254295261E5008AB23A /* ViewController.swift */,
+				97DE73B029595D1000A558F3 /* Info.plist */,
 				974FF256295261E7008AB23A /* Assets.xcassets */,
 				974FF258295261E7008AB23A /* Main.storyboard */,
 				974FF25B295261E7008AB23A /* TableViewWithButton.entitlements */,
+				97DE73AB2954341F00A558F3 /* myTableView.swift */,
+				97DE73AD295435A400A558F3 /* myTableView.xib */,
 			);
 			path = TableViewWithButton;
 			sourceTree = "<group>";
@@ -225,7 +234,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97DE73B129595D1000A558F3 /* Info.plist in Resources */,
 				974FF257295261E7008AB23A /* Assets.xcassets in Resources */,
+				97DE73AE295435A400A558F3 /* myTableView.xib in Resources */,
 				974FF25A295261E7008AB23A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				974FF255295261E5008AB23A /* ViewController.swift in Sources */,
+				97DE73AC2954341F00A558F3 /* myTableView.swift in Sources */,
 				974FF253295261E5008AB23A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +437,7 @@
 				DEVELOPMENT_TEAM = 7QPZTLEJ7L;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TableViewWithButton/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -452,6 +465,7 @@
 				DEVELOPMENT_TEAM = 7QPZTLEJ7L;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TableViewWithButton/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
