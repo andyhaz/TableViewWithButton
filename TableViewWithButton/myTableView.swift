@@ -4,10 +4,12 @@
 //
 //  Created by andyhaz on 12/22/22.
 //
-
+import Foundation
 import Cocoa
 
 class myTableView: NSTableCellView {
+    //set up delgate
+    weak var delegate: tableDelegate?
     
     var buttonTitle:String = ""
 
@@ -21,7 +23,8 @@ class myTableView: NSTableCellView {
     @IBOutlet var button: NSButton!
     
     @IBAction func button(_ sender: Any) {
-     print(buttonTitle)
+        print(buttonTitle)
+        self.delegate?.tableEvent(texrData: buttonTitle)
     }
     
      func configer(title:String){

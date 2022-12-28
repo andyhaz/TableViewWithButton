@@ -7,7 +7,11 @@
 
 import Cocoa
 
-class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
+protocol tableDelegate:AnyObject{
+    func tableEvent(texrData:String)
+}
+
+class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource,tableDelegate {
     
     @IBOutlet var tableView: NSTableView!
     
@@ -15,7 +19,7 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //
         tableView.register(myTableView.nib(), forIdentifier: NSUserInterfaceItemIdentifier(rawValue: myTableView.identifier) )
         
         tableView.dataSource = self
@@ -32,6 +36,8 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         guard let userCell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "myTableView"), owner: self) as? myTableView else { return nil }
         
         userCell.configer(title:cellData)
+        
+        userCell.delegate = self
         
         return userCell
     }
@@ -57,4 +63,7 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         cell.textLabel?.text = data[indexPath.row]
         return cell
     }*/
+    func tableEvent(texrData:String){
+        print("tableEvent:\(texrData)")
+    }
 }
